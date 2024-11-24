@@ -1,0 +1,16 @@
+# write code to check whether the file has read write execute permission
+
+#!/bin/bash
+
+echo "Enter file name:"
+read r
+
+if [ -r "$r" ]; then
+    echo "$r has read permission."
+elif [ -w "$r" ]; then
+    echo "$r has write permission."
+elif [ -x "$r" ]; then
+    echo "$r has execute permission."
+else
+    echo "$r has no read, write, or execute permission."
+fi
