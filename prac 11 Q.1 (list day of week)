@@ -1,0 +1,6 @@
+# for loop using day of week list
+
+for i in mon tus wed thur fri sat sun
+do
+echo $i
+done
