@@ -1,0 +1,18 @@
+# fibonachi series
+
+echo "Enter the number of terms:"
+read terms
+
+a=0
+b=1
+
+echo "Fibonacci series:"
+for ((i = 1; i <= terms; i++))
+do
+  echo -n "$a "
+  temp=$((a + b)) # Calculate the next Fibonacci number
+  a=$b            # Update 'a' to the next number
+  b=$temp         # Update 'b' to the next number
+done
+
+echo # Print a newline at the end
