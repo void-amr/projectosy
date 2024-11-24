@@ -1,0 +1,12 @@
+# copy one files content into another file
+echo "Enter file name:"
+read f1
+echo "ENter destination file name:"
+read f2
+
+if [ -f "$f1" ]; then 
+cp "$f1" "$f2"
+echo "File copied successfully"
+else 
+echo "$f1 does not exist"
+fi
