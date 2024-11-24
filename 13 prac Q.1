@@ -1,0 +1,11 @@
+#list all executable file in current directory
+#!/bin/bash
+
+# List all executable files in the current directory
+echo "Executable files in the current directory:"
+
+for file in *; do
+    if [ -x "$file" ]; then
+        echo "$file"
+    fi
+done
