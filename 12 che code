@@ -1,0 +1,9 @@
+# display direcotries in your home directories 
+#!/bin/bash
+
+echo "Directories in your home directory:"
+for item in "$HOME"/*; do
+    if [ -d "$item" ]; then
+        echo "$(basename "$item")"
+    fi
+done
