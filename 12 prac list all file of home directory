@@ -1,0 +1,9 @@
+#list all files of home directory
+#!/bin/bash
+
+echo "Files in your home directory:"
+for item in "$HOME"/*; do
+    if [ -f "$item" ]; then
+        echo "$(basename "$item")"
+    fi
+done
