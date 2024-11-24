@@ -1,0 +1,15 @@
+# accepts file name and assign all permission to it
+#!/bin/bash
+
+# Accept file name as input
+echo "Enter the file name:"
+read filename
+
+# Check if the file exists
+if [ -e "$filename" ]; then
+    # Assign read, write, and execute permissions to the file
+    chmod 777 "$filename"
+    echo "All permissions (read, write, execute) have been assigned to '$filename'."
+else
+    echo "File '$filename' does not exist."
+fi
