@@ -1,0 +1,23 @@
+# loop to print * pattern
+
+
+echo "Enter rows:"
+read row
+
+for ((i = row; i > 0; i--))
+do
+  # Print leading spaces
+  for ((j = 0; j < row - i; j++))
+  do
+    echo -ne " "
+  done
+  
+  # Print stars
+  for ((j = 0; j < 2 * i - 1; j++))
+  do
+    echo -ne "*"
+  done
+  
+  # Move to the next line
+  echo
+done
