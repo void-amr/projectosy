@@ -1,0 +1,47 @@
+#mathmatical operation 
+while [ true ]
+do
+echo "number 1:"
+read num1
+echo "number 2:"
+read num2
+
+echo "Select operation "
+echo "1) Addition"
+echo "2) Subtraction"
+echo "3) Multiplication"
+echo "4) Division"
+
+
+read option
+
+case $option in
+1)
+res=$((num1+num2))
+echo "Addition is $res"
+;;
+2)
+res=$((num1-num2))
+echo "subtractin is $res"
+;;
+3)
+res=$((num1*num2))
+echo "multiplication is $res"
+;;
+4)
+res=$((num1/num2))
+echo "division is $res"
+;;
+*)  if [ $num2 -ne 0 ]; then
+      result=$((num1 / num2))
+      echo "Result: $num1 / $num2 = $result"
+    else
+      echo "Error: Division by zero is not allowed."
+    fi
+    ;;
+  *)
+    echo "Invalid operation selected."
+    ;;
+esac
+echo "Select Another Option "
+done
